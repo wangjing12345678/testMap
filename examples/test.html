@@ -18,8 +18,10 @@
 <script>
     function getLocation(){
         if (navigator.geolocation){
+            console.log("keyi ")
             navigator.geolocation.getCurrentPosition(showPosition,showError);
         }else{
+            console.log("不行 ")
             alert("浏览器不支持地理定位。");
         }
     }
@@ -27,11 +29,12 @@
         var lat = position.coords.latitude; //纬度
         var lag = position.coords.longitude; //经度
         alert('纬度:'+lat+',经度:'+lag);
+        console.log('纬度:'+lat+',经度:'+lag)
     }
 
     getLocation()
 function showError() {
-    
+
 }
 
 
